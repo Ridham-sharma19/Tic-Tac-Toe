@@ -1,7 +1,16 @@
 import React from 'react'
 
-export default function Block() {
+
+interface BlockProps {
+  value: string | null;
+  onClick?:()=>void
+  
+}
+
+export default function Block({ value,onClick }: BlockProps) {
   return (
-    <div className='border-2 border-black w-20  gap-3 h-20'></div>
-  )
+    <div onClick={onClick} className="border-2 text-3xl  border-black w-20 h-20 flex items-center justify-center font-bold">
+      {value}
+    </div>
+  );
 }
