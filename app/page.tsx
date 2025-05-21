@@ -55,9 +55,9 @@ export default function Home() {
           </div>
           <button
             onClick={handleReset}
-            className="bg-slate-400 text-lg sm:text-xl text-white px-4 py-2 rounded-3xl shadow-lg hover:bg-green-800 transition-all duration-300 transform hover:scale-105"
+            className="bg-slate-400 text-lg sm:text-xl text-white px-4 py-2 rounded-3xl shadow-lg hover:bg-pink-500 transition-all duration-300 transform hover:scale-105"
           >
-            Reset
+            Restart
           </button>
         </div>
       ) : (
@@ -70,6 +70,12 @@ export default function Home() {
               <Block key={idx} onClick={() => handleBlock(idx)} value={val} />
             ))}
           </div>
+           <button
+            onClick={handleReset}
+            className="bg-slate-400 text-lg sm:text-xl mt-5 text-white px-4 py-2 rounded-3xl shadow-lg hover:bg-pink-500 transition-all duration-300 transform hover:scale-105"
+          >
+            Reset
+          </button>
         </>
       )}
     </BackgroundBeamsWithCollision>
